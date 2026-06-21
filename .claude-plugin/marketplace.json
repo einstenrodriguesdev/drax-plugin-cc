@@ -1,0 +1,21 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "drax",
+  "description": "Drax — agentic corporate-governance orchestration for solo founders. Runs a full board-to-IC operating org natively in Claude Code.",
+  "owner": {
+    "name": "Drax",
+    "email": "einstenrodrigues.dev@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "drax",
+      "description": "Turn a founder into a governed company: a Chairman's Director's Letter seeds a document-progressive interview where the board and C-suite fabricate the full corporate-governance suite, then supervise ICs and produce real reports.",
+      "author": {
+        "name": "Drax"
+      },
+      "category": "productivity",
+      "source": "./",
+      "homepage": "https://drax.co"
+    }
+  ]
+}

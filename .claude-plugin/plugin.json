@@ -1,0 +1,21 @@
+{
+  "name": "drax",
+  "version": "0.1.0",
+  "description": "Agentic corporate-governance orchestration for solo founders, native to Claude Code.",
+  "author": {
+    "name": "Drax",
+    "email": "einstenrodrigues.dev@gmail.com",
+    "url": "https://drax.co"
+  },
+  "homepage": "https://drax.co/docs",
+  "repository": "https://github.com/einstenrodriguesdev/drax-plugin-cc",
+  "license": "UNLICENSED",
+  "keywords": [
+    "founder",
+    "governance",
+    "orchestration",
+    "board",
+    "c-suite",
+    "agents"
+  ]
+}
