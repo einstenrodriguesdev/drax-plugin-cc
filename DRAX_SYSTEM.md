@@ -25,7 +25,8 @@ The build advances through gates; a gate closes when its owned document is writt
 | --- | --- | --- |
 | G0 | chairman | `CHAIRMAN_LETTER.md` (Director's Letter — seed) + `VISION.md` |
 | G1 | ceo | `EXECUTION_PLAN.md` (Activation Matrix, OKRs, dependency order) |
-| Domain | cto / cmo / cro / cfo / … | `TECH.md`, `GTM.md`, `REVENUE.md`, `FINANCE.md`, … |
+| Domain | cto / cmo / cro / cfo / design-cto / ciso | `TECH.md`, `PRODUCT.md`, `DESIGN_SYSTEM.md`, `GTM.md`, `REVENUE.md`, `FINANCE.md`, `SECURITY.md` |
+| Coverage | ceo (with cto+chro+ciso) | `CAPABILITY_COVERAGE.md` (mandatory — Section 3b) |
 
 The **governance suite** (Section 5) is fabricated alongside the strategic chain, each document
 owned and approved per its template header.
@@ -33,6 +34,46 @@ owned and approved per its template header.
 - `CHAIRMAN_LETTER.md` is the north-star mandate. It is immutable until the founder reopens G0.
 - `EXECUTION_PLAN.md` is mutable; the CEO updates it at every phase transition.
 - Domain and governance documents iterate under their owners.
+
+**Role accountability (non-negotiable).** A domain is not "covered" until its owner has actually
+activated and produced its document AND its report. In particular: the **CMO** owns `GTM.md`, the
+**design-CTO** owns `PRODUCT.md` + `DESIGN_SYSTEM.md`, the **CTO** owns `TECH.md`, and the **CISO**
+owns `SECURITY.md`. Security and product/design are never skipped: if the product has any user
+surface, design-CTO activates; if it handles any data, credentials, or payments, CISO activates.
+Receiving each C-level's report is mandatory, not optional.
+
+## 3a. Fundamental inputs (mandatory before domain build)
+
+The interview MUST capture these before TECH/PRODUCT execution begins — never assume them:
+
+- **Tech stack** — frontend, backend, database, hosting, auth, payments (owner: CTO, in `TECH.md`).
+- **Design fundamentals** — brand colors (exact hex), typography (families, scale), spacing/grid,
+  component style, accessibility target (owner: design-CTO + brand-strategist + art-director, in
+  `DESIGN_SYSTEM.md`).
+- **Product fundamentals** — primary user surface(s), core flows, platform targets (owner:
+  design-CTO/CPO, in `PRODUCT.md`).
+
+If any is unknown, present the 3-option decision pattern (Section 8) and ask — do not invent.
+
+## 3b. Capability coverage (mandatory)
+
+Before any domain execution (writing code, producing design, shipping content), the system MUST
+verify that the **available org actually covers the chosen work**, and write `CAPABILITY_COVERAGE.md`:
+
+1. Derive the required capabilities from the chosen stack and scope (e.g. React+TypeScript,
+   Node/Postgres, secure auth, payment integration, brand/UI design, copy, SEO).
+2. Map each required capability to the specific agent(s) that own it (e.g. React →
+   `senior-frontend-engineer`; secure code review → `appsec-engineer`/`security-engineer`; UI/brand
+   → `design-cto`/`art-director`/`social-media-designer`; data/privacy → `cdo`/`ciso`).
+3. For each, state the **coverage guarantee**: who produces it, who reviews it for professional
+   quality, and who reviews it for security. Code must pass a security review (appsec/security-engineer)
+   and a quality bar; design must pass design-CTO/art-director review against `DESIGN_SYSTEM.md`.
+4. Flag every **gap** (a required capability with no owning agent, or no review path) as
+   `COVERAGE_GAP` and surface it to the founder. Domain execution does not proceed on a gap until the
+   founder explicitly accepts it or the gap is closed.
+
+This analysis is owned by the CEO (with CTO, CHRO, CISO) and is refreshed whenever the stack or scope
+changes. `/drax:coverage` runs it on demand.
 
 ## 4. Authority Map (conflict resolution)
 

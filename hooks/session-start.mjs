@@ -13,10 +13,22 @@ const SCHEMA_VERSION = "1"; // bump when the expected governance doc set changes
 // resolves it from its own location so it works at any install path.
 const DRAX_ASSETS = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
-// Canonical governance suite expected by this plugin version (English artifacts).
+// Canonical document set expected by this plugin version (English artifacts):
+// strategic chain + mandatory coverage + governance suite. Additive docs (PRODUCT,
+// DESIGN_SYSTEM, SECURITY, CAPABILITY_COVERAGE) are tracked without bumping the
+// schema version, so an existing v1 workspace is not forced to re-migrate.
 const EXPECTED_DOCS = [
   "CHAIRMAN_LETTER.md",
   "VISION.md",
+  "EXECUTION_PLAN.md",
+  "TECH.md",
+  "PRODUCT.md",
+  "DESIGN_SYSTEM.md",
+  "GTM.md",
+  "REVENUE.md",
+  "FINANCE.md",
+  "SECURITY.md",
+  "CAPABILITY_COVERAGE.md",
   "ARTICLES_OF_INCORPORATION.md",
   "SHAREHOLDERS_AGREEMENT.md",
   "BOARD_CHARTER.md",

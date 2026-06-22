@@ -25,6 +25,7 @@ claude plugin install drax@drax
 | --- | --- |
 | `/drax` | Start or resume the governance build |
 | `/drax:status` | Org-chart progress: documents, gates, blockers |
+| `/drax:coverage` | Mandatory capability-coverage check — does the org cover the chosen stack/work? |
 | `/drax:report [area]` | A C-level consolidates a real report by dispatching IC subagents |
 | `/drax:loop [area]` | In-session iterative work/report loop until completion |
 | `/drax:schedule [cadence]` | Register a recurring cloud routine for reports |

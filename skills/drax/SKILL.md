@@ -46,6 +46,34 @@ You ask one question, wait for the answer, then continue. Do not dump a large pl
 for the current document exist. Cross-domain conflicts resolve via the Authority Map; gates close by
 writing the owned document.
 
+### Mandatory: fundamental inputs (do not skip)
+Before any technical or product build, you MUST capture and write down:
+- **Tech stack** → activate `cto`, write `TECH.md` (frontend, backend, DB, hosting, auth, payments).
+- **Design fundamentals** → activate `design-cto` (with `brand-strategist`, `art-director`), write
+  `DESIGN_SYSTEM.md`: **brand colors (exact hex), typography (font families + scale), spacing/grid,
+  component style, accessibility target**.
+- **Product fundamentals** → `design-cto`/`cpo`, write `PRODUCT.md`: primary user surfaces, core
+  flows, platform targets.
+A prior run failed by never asking stack, colors, or typography — treat these as required gates, not
+optional. If unknown, use the 3-option decision pattern and ask one at a time.
+
+### Mandatory: capability coverage (do not skip)
+After the stack and scope are chosen and BEFORE domain execution, run the capability-coverage analysis
+(constitution Section 3b) and write `CAPABILITY_COVERAGE.md`. Map every required capability
+(e.g. React/TypeScript, Node/Postgres, secure auth, payments, UI/brand design, copy, SEO) to the
+owning agent, state who **produces**, who **quality-reviews**, and who **security-reviews** it, and
+flag any `COVERAGE_GAP`. Code must pass an `appsec-engineer`/`security-engineer` review; design must
+pass `design-cto`/`art-director` review against `DESIGN_SYSTEM.md`. Do not start building on an open
+gap — surface it and let the founder accept or close it. Re-run via `/drax:coverage` when stack/scope
+changes.
+
+### Mandatory: exercise and report the C-suite
+Every relevant C-level must actually activate and report — receiving their reports is vital:
+the **CMO** (`GTM.md`), the **CTO** (`TECH.md`), the **design-CTO** (`PRODUCT.md` + `DESIGN_SYSTEM.md`),
+and the **CISO** (`SECURITY.md`) whenever the product has a user surface, handles data, credentials,
+or payments. Use `/drax:report <area>` to consolidate each. Never report a domain as covered without
+its owner's produced document.
+
 ## Governance suite (templates in `{{DRAX_ASSETS}}/templates/`)
 Each template names its Owner, Approver, and chain role. Fabricate them as their owners are reached:
 
@@ -66,8 +94,11 @@ Each template names its Owner, Approver, and chain role. Fabricate them as their
 
 To start a document, copy the matching template from `{{DRAX_ASSETS}}/templates/` into
 `./drax-workspace/`, then fill it by interviewing the founder. These sit alongside the strategic
-chain (`VISION.md`, `EXECUTION_PLAN.md`, `TECH.md`, `GTM.md`, `REVENUE.md`, `FINANCE.md`) that the
-agents already own.
+chain (`VISION.md`, `EXECUTION_PLAN.md`, `TECH.md`, `PRODUCT.md`, `DESIGN_SYSTEM.md`, `GTM.md`,
+`REVENUE.md`, `FINANCE.md`, `SECURITY.md`) and the mandatory `CAPABILITY_COVERAGE.md` that the
+agents own. `DESIGN_SYSTEM.md` and `CAPABILITY_COVERAGE.md` use templates in
+`{{DRAX_ASSETS}}/templates/`; `PRODUCT.md` and `SECURITY.md` are written by `design-cto` and `ciso`
+per their own agent definitions.
 
 ## Dispatching agents
 Use the Agent tool with `subagent_type` set to the agent name (e.g. `chairman`, `cfo`, `clo`).
@@ -78,6 +109,7 @@ dispatches its ICs as subagents and consolidates `REPORT_<area>.md` (see `/drax:
 ## Commands
 - `/drax` — start or resume this flow.
 - `/drax:status` — show org-chart progress, gate state, blockers.
+- `/drax:coverage` — run the mandatory capability-coverage analysis (org vs. chosen work).
 - `/drax:report [area]` — a C-level consolidates a real report from IC subagents.
 - `/drax:loop [area]` — in-session iterative work/report loop.
 - `/drax:schedule [cadence]` — register a recurring cloud routine.
