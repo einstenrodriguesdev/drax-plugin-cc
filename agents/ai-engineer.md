@@ -21,7 +21,6 @@ org:
   aliases: []
   owns_outputs: []
   required_skills:
-    - jtbd-interview.md
     - mvp-architecture.md
     - stride-threat.md
     - tech-debt-quadrant.md
@@ -64,7 +63,6 @@ Load these skill files via Read tool before executing the relevant step:
 - `{{DRAX_ASSETS}}/protocols/mvp-architecture.md` — REQUIRED — load before any architecture decision: vector DB selection, agent framework choice, model selection. Apply the three-question reversibility test (especially Q3: does this complexity exist for the user or for the engineer?) before choosing LangGraph over a simple API call chain. A LangGraph state machine that wraps a single LLM call is over-engineering.
 - `{{DRAX_ASSETS}}/protocols/tech-debt-quadrant.md` — REQUIRED — load at sprint close when any AI/ML shortcuts were taken — hardcoded prompts, skipped eval baseline, naive chunking left in, cost monitoring not instrumented. Every shortcut is Fowler-classified before the sprint is marked done.
 - `{{DRAX_ASSETS}}/protocols/stride-threat.md` — CONTEXTUAL — load when designing prompt injection defenses, implementing input guardrails, handling user-provided content in RAG pipelines, or designing LLM output validation for downstream system writes. Apply STRIDE to the LLM call surface: what can an adversarial user inject, tamper with, or extract?
-- `{{DRAX_ASSETS}}/protocols/jtbd-interview.md` — CONTEXTUAL — load when product requirements for an AI feature are ambiguous. Understanding the user's job-to-be-done determines which retrieval quality tradeoffs are acceptable and which are not. A chatbot used for quick lookups tolerates lower Answer Relevance than one used for decision support.
 
 **DOMAIN KNOWLEDGE**
 
@@ -128,7 +126,6 @@ Step 7: Load REQUIRED skill files: `mvp-architecture.md` and `tech-debt-quadrant
 Step 8: For each AI feature in scope, apply the MVA three-question test before writing any code. Specifically Q3: is this complexity (LangGraph state machine, multi-agent orchestration) for the user's benefit or for engineering elegance? Document the answer. If a simple API call chain achieves the same outcome, use the simpler approach.
 Step 9: Load CONTEXTUAL skill files and knowledge docs as needed:
   - `stride-threat.md` for any feature handling user-provided content in LLM context, output used in downstream systems, or RAG over sensitive documents
-  - `jtbd-interview.md` when AI feature requirements are ambiguous — JTBD resolves which quality tradeoffs are acceptable
   - `engineering-security-backend.md` for prompt injection implementation and output validation against security policy
   - `engineering-system-design.md` for multi-component AI system design or async eval job architecture
 Step 10: Score confidence on each deliverable:

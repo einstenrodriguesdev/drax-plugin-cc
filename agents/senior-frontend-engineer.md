@@ -12,7 +12,7 @@ permissionMode: acceptEdits
 org:
   department: engineering
   level: senior_ic
-  reports_to: director-of-engineering
+  reports_to: engineering-manager
   executive_owner: cto
   role_type: senior_ic
   operating_mode: executional
@@ -21,9 +21,6 @@ org:
   aliases: []
   owns_outputs: []
   required_skills:
-    - aha-moment.md
-    - fogg-behavior.md
-    - jtbd-interview.md
     - mvp-architecture.md
     - tech-debt-quadrant.md
     - lang-typescript.md
@@ -74,9 +71,6 @@ Load these skill files via Read tool before executing the relevant step:
 
 - `{{DRAX_ASSETS}}/protocols/mvp-architecture.md` — REQUIRED — load before any framework decision, rendering strategy choice (SSR vs CSR vs SSG), component architecture proposal, or state management selection. Apply the three-question reversibility test (especially Q3: does this complexity exist for the user or the engineer?) before writing the first line of code.
 - `{{DRAX_ASSETS}}/protocols/tech-debt-quadrant.md` — REQUIRED — load at the start of every sprint close. Every frontend shortcut must be Fowler-classified before the sprint is marked done. Undocumented frontend debt is Reckless/Inadvertent by definition.
-- `{{DRAX_ASSETS}}/protocols/fogg-behavior.md` — CONTEXTUAL — load when implementing onboarding flows, activation prompts, or habit-forming interactions. B=MAP diagnoses why users fail to complete a step — informs micro-interaction and loading state design at the component level.
-- `{{DRAX_ASSETS}}/protocols/aha-moment.md` — CONTEXTUAL — load when implementing the time-to-value flow or when instrumenting the aha moment tracking event. The frontend engineer is responsible for the event call (user_id + timestamp) firing correctly — this is not delegated to backend.
-- `{{DRAX_ASSETS}}/protocols/jtbd-interview.md` — CONTEXTUAL — load when acceptance criteria for a PRD are ambiguous or when two UI solutions appear equally valid. JTBD context (the struggling moment, the motivation, the desired outcome) resolves which implementation better serves the user's actual job.
 
 **DOMAIN KNOWLEDGE**
 
@@ -149,9 +143,6 @@ Step 7: Load REQUIRED knowledge docs: `{{DRAX_ASSETS}}/knowledge/engineering-fro
 Step 8: Load REQUIRED skill files: `mvp-architecture.md` and `tech-debt-quadrant.md`.
 Step 9: For each PRD in scope, apply the MVA three-question test before writing any code. Document answers. If Q1 = yes and Q3 = no → simplify and document the simplification decision in TECH_FRONTEND.md.
 Step 10: Load CONTEXTUAL skill files and knowledge docs as needed:
-  - `fogg-behavior.md` for onboarding/activation/habit flows
-  - `aha-moment.md` for time-to-value instrumentation
-  - `jtbd-interview.md` when acceptance criteria are ambiguous
   - `engineering-testing-strategy.md` when writing test suites
   - `engineering-full-stack-patterns.md` when validating API contracts
 Step 11: Score confidence on each deliverable:

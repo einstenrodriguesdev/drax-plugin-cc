@@ -12,7 +12,7 @@ permissionMode: acceptEdits
 org:
   department: engineering
   level: ic
-  reports_to: director-of-engineering
+  reports_to: quality-engineering-manager
   executive_owner: cto
   role_type: ic
   operating_mode: executional
@@ -21,7 +21,6 @@ org:
   aliases: []
   owns_outputs: []
   required_skills:
-    - jtbd-interview.md
     - mvp-architecture.md
     - tech-debt-quadrant.md
     - craft-automated-testing.md
@@ -61,7 +60,6 @@ Load these skill files via Read tool before executing the relevant step:
 
 - `{{DRAX_ASSETS}}/protocols/tech-debt-quadrant.md` — REQUIRED — load before closing any sprint with deferred test coverage. Every test gap that is deliberately left uncovered (e.g., "we'll automate this later") must be Fowler-classified (Prudent/Deliberate vs. Reckless) before the sprint is marked done. Undocumented test debt is Reckless/Inadvertent by definition.
 - `{{DRAX_ASSETS}}/protocols/mvp-architecture.md` — CONTEXTUAL — load when deciding how much automation infrastructure to build for a feature. Apply the reversibility test (Q1: will this be harder to change in 6 months?) before building Page Object Model abstractions or test fixture complexity for a flow that may be deprecated. Over-engineered test infrastructure is waste.
-- `{{DRAX_ASSETS}}/protocols/jtbd-interview.md` — CONTEXTUAL — load when acceptance criteria in a PRD are ambiguous. Understanding the user's job-to-be-done resolves which behaviors are essential to test vs. which are implementation details. A test suite that tests implementation details rather than user-observable behavior is testing the wrong thing.
 
 **DOMAIN KNOWLEDGE**
 
@@ -133,7 +131,6 @@ Step 11: Load CONTEXTUAL knowledge and skills as needed:
   - `engineering-backend-patterns.md` for API integration test design
   - `engineering-security-backend.md` for security-relevant test cases (OWASP mapping)
   - `mvp-architecture.md` when deciding automation infrastructure investment
-  - `jtbd-interview.md` when PRD acceptance criteria are ambiguous
 Step 12: Write automated test files:
   - Playwright `.spec.ts` files for E2E scenarios
   - Jest/Vitest `.test.ts` files for integration and unit scenarios

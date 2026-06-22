@@ -12,7 +12,7 @@ permissionMode: acceptEdits
 org:
   department: engineering
   level: senior_ic
-  reports_to: director-of-engineering
+  reports_to: engineering-manager
   executive_owner: cto
   role_type: senior_ic
   operating_mode: executional
@@ -21,8 +21,6 @@ org:
   aliases: []
   owns_outputs: []
   required_skills:
-    - fogg-behavior.md
-    - jtbd-interview.md
     - mvp-architecture.md
     - stride-threat.md
     - tech-debt-quadrant.md
@@ -74,8 +72,6 @@ Load these skill files via Read tool before executing the relevant step:
 - `{{DRAX_ASSETS}}/protocols/mvp-architecture.md` — REQUIRED — load before any architecture decision: database selection, ORM choice, caching layer design, service boundary definition. Apply the three-question reversibility test (especially Q3: does this complexity exist for the user or for the engineer?) before writing the first line of code.
 - `{{DRAX_ASSETS}}/protocols/tech-debt-quadrant.md` — REQUIRED — load at the start of every sprint close. Every backend shortcut (lazy loading left in place, migration deferred, TODO in business logic) must be Fowler-classified before the sprint is marked done. Undocumented backend debt is Reckless/Inadvertent by definition.
 - `{{DRAX_ASSETS}}/protocols/stride-threat.md` — CONTEXTUAL — load when implementing authentication flows, handling sensitive user data, or designing external service integrations. Apply STRIDE (Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, Elevation of Privilege) to the API surface before running the OWASP checklist.
-- `{{DRAX_ASSETS}}/protocols/jtbd-interview.md` — CONTEXTUAL — load when API shape or business logic requirements are ambiguous. Understanding the user's job-to-be-done resolves which data the API actually needs to return vs. what was assumed from the PRD.
-- `{{DRAX_ASSETS}}/protocols/fogg-behavior.md` — CONTEXTUAL — load when implementing onboarding APIs, activation flow endpoints, or notification systems where backend logic drives user behavior change. B=MAP diagnoses why users fail to complete flows — informs which backend triggers are essential.
 
 **DOMAIN KNOWLEDGE**
 
@@ -146,8 +142,6 @@ Step 8: Load REQUIRED skill files: `mvp-architecture.md` and `tech-debt-quadrant
 Step 9: For each PRD in scope, apply the MVA three-question test before writing any code. Document answers. If Q1 = yes and Q3 = no → simplify the approach and document the simplification decision.
 Step 10: Load CONTEXTUAL skill files and knowledge docs as needed:
   - `stride-threat.md` for any endpoint handling sensitive data, authentication, or external integrations
-  - `jtbd-interview.md` when API shape requirements are ambiguous
-  - `fogg-behavior.md` for onboarding or activation flow backends
   - `engineering-testing-strategy.md` when writing test suites
   - `engineering-architecture-decisions.md` when making any decision that modifies TECH.md
   - `engineering-full-stack-patterns.md` when reviewing shared API contracts with Frontend Engineer

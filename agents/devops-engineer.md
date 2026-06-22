@@ -12,7 +12,7 @@ permissionMode: acceptEdits
 org:
   department: engineering
   level: ic
-  reports_to: director-of-engineering
+  reports_to: platform-engineering-manager
   executive_owner: cto
   role_type: ic
   operating_mode: executional
