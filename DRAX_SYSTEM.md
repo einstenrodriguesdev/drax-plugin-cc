@@ -25,7 +25,9 @@ on the newest Opus at high (or xhigh/max) effort and the IC band on the newest S
 The top tier (e.g. Fable 5, `claude-fable-5`) is offered as an optional maximum-capability choice for
 the executive band. If the founder chooses **guarantee-latest**, Drax always uses the newest models
 and re-checks on later runs. The chosen policy is persisted to `./drax-workspace/.drax/model-policy.json`
-and applied on every Agent dispatch (model per band) and recommended as the session effort level
+and **the first answer becomes the standing default** — later runs read the file and apply it without
+re-asking (re-ask only via `/drax:models`; under guarantee-latest, Drax silently refreshes the model
+IDs but keeps the founder's choices). The policy is applied on every Agent dispatch (model per band) and recommended as the session effort level
 (set via `/effort`, `CLAUDE_CODE_EFFORT_LEVEL`, or settings — effort is a session/settings control,
 not a per-subagent parameter). Current reference at this writing (Drax re-verifies live): Opus 4.8
 `claude-opus-4-8`, Sonnet 4.6 `claude-sonnet-4-6`, Fable 5 `claude-fable-5`; effort levels low /

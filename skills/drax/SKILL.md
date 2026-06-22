@@ -27,8 +27,16 @@ Authority Map, the model policy, and the document chain. Obey it.
    create or rename anything. Tell the founder migration is available via `/drax:migrate` and wait
    for their decision.
 
-## Mandatory: model policy (ask before dispatching any agent)
-Model names change; never assume them. As the first step of a new build (and on `/drax:models`):
+## Mandatory: model policy (ask once, then reuse as default)
+Model names change; never assume them. As the first step of a new build:
+
+**If `./drax-workspace/.drax/model-policy.json` already exists, load it and use it as the default —
+do NOT re-ask.** The founder's first answer is the standing default for every later run. Only re-run
+the ask flow when the policy file is absent (first time) or the founder runs `/drax:models`. If the
+saved policy has `guaranteeLatest: true`, silently WebSearch for newer model IDs and update them in
+the file (keeping the founder's band/effort choices), without re-asking.
+
+First time only (no policy file) — or whenever `/drax:models` is invoked:
 1. Run a **WebSearch** to confirm the **latest available** Opus and Sonnet models (and the current top
    tier, e.g. Fable 5) right now — do not trust a hardcoded list.
 2. Present the recommended policy and ask the founder (3-option pattern):

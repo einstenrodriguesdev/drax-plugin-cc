@@ -7,7 +7,8 @@ allowed-tools: ["Read", "Write", "Bash", "WebSearch"]
 # Drax — Model Policy
 
 Decide which models the org's agents use, based on what is actually available now. Read
-`{{DRAX_ASSETS}}/DRAX_SYSTEM.md` (Section 2) first.
+`{{DRAX_ASSETS}}/DRAX_SYSTEM.md` (Section 2) first. This command explicitly **revisits** the policy
+and re-asks; normal `/drax` runs reuse the saved first answer as the default without asking again.
 
 Input: $ARGUMENTS
 
