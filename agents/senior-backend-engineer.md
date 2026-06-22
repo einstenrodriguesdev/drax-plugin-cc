@@ -26,7 +26,17 @@ org:
     - mvp-architecture.md
     - stride-threat.md
     - tech-debt-quadrant.md
-  contextual_skills: []
+    - lang-typescript.md
+    - framework-node.md
+    - craft-api-design.md
+    - craft-system-design.md
+    - craft-secure-coding.md
+    - craft-code-review.md
+    - craft-automated-testing.md
+  contextual_skills:
+    - lang-javascript.md
+    - craft-performance.md
+    - craft-debugging-observability.md
   required_knowledge:
     - engineering-architecture-decisions.md
     - engineering-backend-patterns.md

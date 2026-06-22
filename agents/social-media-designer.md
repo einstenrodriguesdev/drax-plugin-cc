@@ -23,6 +23,7 @@ org:
     - channel-hypothesis.md
     - content-mix.md
     - document-dont-create.md
+    - design-visual.md
   contextual_skills: []
   required_knowledge:
     - design-social-media-formats.md

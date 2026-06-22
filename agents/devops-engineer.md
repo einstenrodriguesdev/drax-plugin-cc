@@ -24,7 +24,10 @@ org:
     - mvp-architecture.md
     - stride-threat.md
     - tech-debt-quadrant.md
-  contextual_skills: []
+    - craft-system-design.md
+    - craft-debugging-observability.md
+  contextual_skills:
+    - framework-node.md
   required_knowledge:
     - engineering-devops-cicd.md
     - engineering-devops-iac.md

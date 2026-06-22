@@ -25,6 +25,9 @@ org:
     - mvp-architecture.md
     - stride-threat.md
     - tech-debt-quadrant.md
+    - craft-system-design.md
+    - craft-code-review.md
+    - craft-api-design.md
   contextual_skills: []
   required_knowledge:
     - ai-llm-cost-management.md

@@ -24,7 +24,9 @@ org:
   required_skills:
     - document-dont-create.md
     - release-governance.md
-  contextual_skills: []
+    - craft-system-design.md
+  contextual_skills:
+    - framework-node.md
   required_knowledge:
     - engineering-platform-governance.md
     - engineering-reliability-operations.md

@@ -24,7 +24,11 @@ org:
   required_skills:
     - document-dont-create.md
     - release-governance.md
-  contextual_skills: []
+    - framework-react.md
+    - craft-code-review.md
+    - craft-automated-testing.md
+  contextual_skills:
+    - lib-tailwind.md
   required_knowledge:
     - engineering-platform-governance.md
     - engineering-reliability-operations.md

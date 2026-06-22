@@ -24,6 +24,9 @@ org:
   required_skills:
     - incident-command.md
     - threat-modeling.md
+    - craft-secure-coding.md
+    - craft-code-review.md
+    - craft-api-design.md
   contextual_skills: []
   required_knowledge:
     - security-application-engineering.md

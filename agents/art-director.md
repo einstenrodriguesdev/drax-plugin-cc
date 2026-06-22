@@ -26,6 +26,8 @@ org:
     - document-dont-create.md
     - fogg-behavior.md
     - positioning.md
+    - design-visual.md
+    - design-systems.md
   contextual_skills: []
   required_knowledge:
     - creative-brief-framework.md

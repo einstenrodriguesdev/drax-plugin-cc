@@ -24,6 +24,9 @@ org:
     - jtbd-interview.md
     - mvp-architecture.md
     - tech-debt-quadrant.md
+    - craft-automated-testing.md
+    - craft-code-review.md
+    - craft-debugging-observability.md
   contextual_skills: []
   required_knowledge:
     - engineering-backend-patterns.md

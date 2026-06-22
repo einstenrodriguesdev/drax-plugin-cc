@@ -21,8 +21,14 @@ org:
   aliases: []
   owns_outputs:
     - PRODUCT.md
-  required_skills: []
-  contextual_skills: []
+  required_skills:
+    - design-visual.md
+    - design-systems.md
+    - design-accessibility.md
+    - design-interaction.md
+  contextual_skills:
+    - lang-html.md
+    - lang-css.md
   required_knowledge: []
   contextual_knowledge: []
 ---

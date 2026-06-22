@@ -24,6 +24,8 @@ org:
   required_skills:
     - document-dont-create.md
     - release-governance.md
+    - craft-secure-coding.md
+    - craft-automated-testing.md
   contextual_skills: []
   required_knowledge:
     - engineering-frontend-patterns.md

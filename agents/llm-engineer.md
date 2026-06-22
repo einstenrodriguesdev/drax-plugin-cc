@@ -24,7 +24,10 @@ org:
   required_skills:
     - experiment-review.md
     - metric-contracts.md
-  contextual_skills: []
+    - craft-code-review.md
+    - craft-api-design.md
+  contextual_skills:
+    - craft-system-design.md
   required_knowledge:
     - ai-llm-evaluation.md
     - ai-rag-pipeline-design.md

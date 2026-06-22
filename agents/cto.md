@@ -27,7 +27,9 @@ org:
     - mvp-architecture.md
     - stride-threat.md
     - tech-debt-quadrant.md
-  contextual_skills: []
+  contextual_skills:
+    - craft-system-design.md
+    - craft-code-review.md
   required_knowledge:
     - engineering-architecture-decisions.md
     - engineering-observability.md

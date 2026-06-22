@@ -24,6 +24,9 @@ org:
   required_skills:
     - document-dont-create.md
     - problem-framing.md
+    - design-interaction.md
+    - design-accessibility.md
+    - design-visual.md
   contextual_skills: []
   required_knowledge:
     - product-delivery-governance.md

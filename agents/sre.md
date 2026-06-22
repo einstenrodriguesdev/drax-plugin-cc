@@ -24,6 +24,9 @@ org:
   required_skills:
     - document-dont-create.md
     - release-governance.md
+    - craft-system-design.md
+    - craft-debugging-observability.md
+    - craft-performance.md
   contextual_skills: []
   required_knowledge:
     - engineering-platform-governance.md

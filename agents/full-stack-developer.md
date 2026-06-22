@@ -26,7 +26,19 @@ org:
     - jtbd-interview.md
     - mvp-architecture.md
     - tech-debt-quadrant.md
-  contextual_skills: []
+    - lang-typescript.md
+    - framework-react.md
+    - framework-node.md
+    - lib-tailwind.md
+    - craft-code-review.md
+    - craft-automated-testing.md
+    - craft-secure-coding.md
+  contextual_skills:
+    - framework-astro.md
+    - lang-css.md
+    - lang-html.md
+    - craft-api-design.md
+    - lang-javascript.md
   required_knowledge:
     - engineering-architecture-decisions.md
     - engineering-full-stack-patterns.md

@@ -24,6 +24,8 @@ org:
   required_skills:
     - document-dont-create.md
     - release-governance.md
+    - craft-system-design.md
+    - craft-api-design.md
   contextual_skills: []
   required_knowledge:
     - engineering-platform-governance.md
