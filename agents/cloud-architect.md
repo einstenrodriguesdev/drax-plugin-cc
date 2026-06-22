@@ -24,6 +24,9 @@ org:
   required_skills:
     - release-governance.md
     - craft-system-design.md
+    - infra-cloud.md
+    - infra-iac-terraform.md
+    - infra-containers.md
   contextual_skills:
     - framework-node.md
   required_knowledge:

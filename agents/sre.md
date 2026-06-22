@@ -26,6 +26,8 @@ org:
     - craft-system-design.md
     - craft-debugging-observability.md
     - craft-performance.md
+    - infra-kubernetes.md
+    - infra-ci-cd.md
   contextual_skills: []
   required_knowledge:
     - engineering-platform-governance.md

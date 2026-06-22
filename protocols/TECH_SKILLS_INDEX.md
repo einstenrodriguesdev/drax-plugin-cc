@@ -11,6 +11,8 @@ Engineering and design skills, organized by type. Agents reference these from
 | `lang-typescript.md` | Strict mode, advanced types (conditional/mapped/template-literal, discriminated unions), `satisfies`, `unknown` over `any` |
 | `lang-html.md` | Semantic HTML, landmarks, heading order, labeled forms, viewport meta |
 | `lang-css.md` | Cascade layers, custom properties, logical properties, container queries, `oklch`, reduced-motion |
+| `lang-swift.md` | Swift/SwiftUI (iOS) — value semantics, optionals, actors/async-await, ARC, `@Observable` |
+| `lang-kotlin.md` | Kotlin/Jetpack Compose (Android) — null-safety, coroutines/Flow, sealed classes, KMP |
 
 ## Frameworks / runtime (`framework-`)
 | Skill | Covers |
@@ -18,12 +20,28 @@ Engineering and design skills, organized by type. Agents reference these from
 | `framework-react.md` | React 19 — Server/Client boundary, `use()`, hooks rules, state strategy, React Compiler memoization |
 | `framework-astro.md` | Astro 6 — Islands hydration directives, Content Collections (Zod), Server Islands, SSG-first hybrid |
 | `framework-node.md` | Node — ESM, streams, `AsyncLocalStorage`, boundary validation, graceful shutdown, no eval/sync-FS in handlers |
+| `framework-react-native.md` | React Native — New Architecture (Fabric/TurboModules), typed navigation, Reanimated, OTA safety |
 
 ## Libraries / tooling (`lib-`)
 | Skill | Covers |
 | --- | --- |
 | `lib-tailwind.md` | Tailwind v4 — CSS-first `@theme`, `@tailwindcss/vite`, 3 token layers, minimal `@apply`, Oxide |
 | `lib-vite.md` | Vite — `defineConfig`, env, `optimizeDeps`, Rollup chunking, plugin order, secrets hygiene |
+
+## Infrastructure / ops (`infra-`)
+| Skill | Covers |
+| --- | --- |
+| `infra-containers.md` | Docker — multi-stage, distroless, non-root, image scanning/signing, `.dockerignore` |
+| `infra-kubernetes.md` | Deployments/StatefulSets, probes, HPA/KEDA, ResourceQuotas, Helm/Kustomize, GitOps separation |
+| `infra-iac-terraform.md` | Terraform — modules, remote state+locking, plan/apply, drift, OIDC, env-per-dir |
+| `infra-ci-cd.md` | Pipelines (build/test/scan/deploy), DORA metrics, blue-green/canary, cosign, Argo CD |
+| `infra-cloud.md` | Cloud-agnostic across AWS/GCP/Azure — primitives, IAM-over-network, multi-AZ, FinOps |
+| `infra-networking.md` | DNS, TLS everywhere, VPC segmentation, zero-trust mTLS, L4/L7 LB, CDN/WAF, egress control |
+
+## Embedded (`embedded-`)
+| Skill | Covers |
+| --- | --- |
+| `embedded-systems.md` | C/C++ firmware — no hot-path allocation, ISR discipline, RTOS, WCET, watchdog, linker scripts |
 
 ## Design (`design-`)
 | Skill | Covers |

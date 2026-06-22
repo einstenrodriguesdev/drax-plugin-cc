@@ -26,6 +26,7 @@ org:
     - craft-code-review.md
     - craft-automated-testing.md
     - craft-secure-coding.md
+    - lang-swift.md
   contextual_skills: []
   required_knowledge:
     - engineering-frontend-patterns.md

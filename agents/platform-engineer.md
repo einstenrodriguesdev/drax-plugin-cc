@@ -25,6 +25,10 @@ org:
     - release-governance.md
     - framework-node.md
     - craft-system-design.md
+    - infra-kubernetes.md
+    - infra-containers.md
+    - infra-iac-terraform.md
+    - infra-ci-cd.md
   contextual_skills:
     - craft-debugging-observability.md
   required_knowledge:

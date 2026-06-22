@@ -26,6 +26,10 @@ org:
     - tech-debt-quadrant.md
     - craft-system-design.md
     - craft-debugging-observability.md
+    - infra-containers.md
+    - infra-ci-cd.md
+    - infra-iac-terraform.md
+    - infra-kubernetes.md
   contextual_skills:
     - framework-node.md
   required_knowledge:

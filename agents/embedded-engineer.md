@@ -25,6 +25,7 @@ org:
     - release-governance.md
     - craft-secure-coding.md
     - craft-automated-testing.md
+    - embedded-systems.md
   contextual_skills: []
   required_knowledge:
     - engineering-frontend-patterns.md
