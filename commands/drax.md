@@ -1,7 +1,7 @@
 ---
 description: Start or resume the Drax corporate-governance build (Chairman's Director's Letter → document-progressive interview → governed org)
 argument-hint: "[optional task or 'resume']"
-allowed-tools: ["Read", "Write", "Glob", "Grep", "Agent", "Bash"]
+allowed-tools: ["Read", "Write", "Glob", "Grep", "Agent", "Bash", "WebSearch"]
 ---
 
 # Drax — Corporate-Governance Orchestration

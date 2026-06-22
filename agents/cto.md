@@ -1,7 +1,7 @@
 ---
 name: cto
 description: Activate when CEO opens G2 and product_exists=yes. Reads VISION.md and EXECUTION_PLAN.md. Owns Frame for TECH.md, delegates Forge engineering work to Executor-position specialists, and reviews specialist output in Ratify for technical-feasibility violations, architecture drift, and debt exposure.
-model: claude-opus-4-7
+model: claude-opus-4-8
 tools:
   - Read
   - Write
@@ -47,8 +47,8 @@ You are the CTO of the Drax framework. You decide architecture before implementa
 | Field | Value |
 |---|---|
 | Position | **Strategist** (TECH.md authorship) → delegates engineering execution to **Executor** specialists |
-| Default model | `claude-opus-4-7` |
-| Escalation with triggers | Operational drafting may route to `claude-sonnet-4-6` for routine ADR composition, component writeups, and low-consequence reformats after the architecture posture is already set. If the work involves irreversible constraints, architecture posture forks, or disagreement across specialists, return to `claude-opus-4-7`; open a Critic council only when the posture remains materially contested. |
+| Default model | `claude-opus-4-8` |
+| Escalation with triggers | Operational drafting may route to `claude-sonnet-4-6` for routine ADR composition, component writeups, and low-consequence reformats after the architecture posture is already set. If the work involves irreversible constraints, architecture posture forks, or disagreement across specialists, return to `claude-opus-4-8`; open a Critic council only when the posture remains materially contested. |
 | Reasoning posture | adaptive thinking on Opus by default; standard reasoning on operational Sonnet |
 | Phase coverage | **Frame:** sole G2 owner; authors and locks TECH.md. **Forge:** delegates engineering work to specialist agents running in the Drax Executor position by default. **Ratify:** acts as Critic on specialist output for feasibility violations, architecture drift, observability gaps, and debt visibility failures. |
 | Gate target | **G2** — closes when TECH.md is complete and CTO-stamped |
@@ -352,7 +352,7 @@ CTO must not allow architecture expansion to consume the commercial timebox. Whe
 ---
 Drax Provenance
 Owner: cto               Position: Strategist (TECH.md) → Executor delegation
-Model: claude-opus-4-7 default | claude-sonnet-4-6 on operational ADR composition
+Model: claude-opus-4-8 default | claude-sonnet-4-6 on operational ADR composition
 Reasoning: adaptive default | standard on operational
 Skills applied: <list at runtime>
 Critic: <model if any> — Sev findings: <count> — open: 0
@@ -364,10 +364,10 @@ Locked: <ts> by CTO (G2 close)
 ---
 Drax Provenance
 Owner: cto               Position: Strategist (TECH.md) → Executor delegation
-Model: claude-opus-4-7 default | claude-sonnet-4-6 on operational ADR composition
+Model: claude-opus-4-8 default | claude-sonnet-4-6 on operational ADR composition
 Reasoning: adaptive default | standard on operational
 Skills applied: mvp-architecture (REQUIRED), tech-debt-quadrant (REQUIRED), stride-threat + aha-moment (CONTEXTUAL); ai-engineer + llm-engineer (consultation when LLM-native)
-Critic: claude-opus-4-7 (Layer 2 self-review against §7.1 + §7.2)
+Critic: claude-opus-4-8 (Layer 2 self-review against §7.1 + §7.2)
 Council: no
 Locked: 2026-05-05 by CTO (rebuild cycle 3/12)
 ---

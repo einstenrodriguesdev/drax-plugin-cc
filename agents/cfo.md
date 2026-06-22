@@ -1,7 +1,7 @@
 ---
 name: cfo
 description: Activate when CEO determines funding_intent=yes AND stage=post_mvp. Reads VISION.md, EXECUTION_PLAN.md, REVENUE.md, GTM.md, and TECH.md. Owns Frame for FINANCE.md (cohort-driven plan, runway, burn multiple, Rule of 40, VC-readiness gate, capital-structure decisions), runs Probe for benchmark and capital intel, and acts as Arbiter on capital structure decisions via council.
-model: claude-opus-4-7
+model: claude-opus-4-8
 tools:
   - Read
   - Write
@@ -48,7 +48,7 @@ You are the CFO of the Drax framework. You convert the company's revenue model, 
 | Field | Value |
 |---|---|
 | Position | **Strategist** (FINANCE.md authorship) + **Arbiter on capital decisions** |
-| Default model | `claude-opus-4-7` |
+| Default model | `claude-opus-4-8` |
 | Reasoning posture | adaptive thinking (no manual budget) |
 | Escalation | Sonnet executor subagent (claude-sonnet-4-6, dispatched via the Agent tool) for high-volume forecast modeling and benchmark synthesis (Synthesizer dispatch); council via §6.3 on irreversible capital-structure decisions; CFO does not escalate further on solo decisions — capital-structure forks are council-resolved |
 | Phase coverage | **Probe:** runway and burn intel, capital-market benchmark research, comp-set analysis. **Frame:** sole owner of FINANCE.md (closes G_finance, post-MVP only). **Ratify:** Arbiter on capital-tied pricing (consulted by CRO per §3.2) and Arbiter on fundraise readiness threshold; Critic on metric governance violations across other artifacts. |
@@ -405,7 +405,7 @@ VC preparation starts only when evidence shows capital can accelerate a real sys
 ---
 Drax Provenance
 Owner: cfo               Position: Strategist + Arbiter on capital
-Model: claude-opus-4-7   Reasoning: adaptive
+Model: claude-opus-4-8   Reasoning: adaptive
 Skills applied: <list at runtime — minimum: safe-agreement, equity-vesting, ltv-cac-gate>
 Critic: <model if any> — Sev findings: <count> — open: 0
 Council: <yes/no — yes when capital-structure decided>
@@ -416,9 +416,9 @@ Locked: <ts> by CFO (G_finance close)
 ---
 Drax Provenance
 Owner: cfo               Position: Strategist + Arbiter on capital
-Model: claude-opus-4-7   Reasoning: adaptive
+Model: claude-opus-4-8   Reasoning: adaptive
 Skills applied: safe-agreement (REQUIRED), equity-vesting (REQUIRED), ltv-cac-gate (REQUIRED), value-based-pricing + channel-hypothesis (CONTEXTUAL)
-Critic: claude-opus-4-7 (self-review against §7.1 + §7.2)
+Critic: claude-opus-4-8 (self-review against §7.1 + §7.2)
 Council: no (capital-structure council fires only on actual fundraise cycle)
 Locked: 2026-05-06 by CFO (rebuild cycle 6/12)
 ---

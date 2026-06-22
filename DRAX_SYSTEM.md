@@ -12,10 +12,24 @@ owns_outputs). Agents never invent facts; missing inputs are recorded as `NEEDS_
 
 ## 2. Model policy
 
-- **Board / C-suite arbiters** (chairman, ceo, cfo, cpo, cto) run on the strongest model for
-  arbitration and gate closure.
-- **All execution / IC / heavy generation** runs on `claude-sonnet-4-6`. Document drafting,
-  research, and report production are dispatched to Sonnet subagents via the Agent tool.
+Two bands:
+- **Executive band** — the board and full C-suite (chairman, ceo, cfo, cto, cpo, cmo, cro, coo,
+  clo, ciso, cdo, chro): run on the most advanced Opus model for arbitration and gate closure.
+- **IC / execution band** — all directors, specialists, and executors: run on the most recent
+  Sonnet model. Document drafting, research, and report production dispatch to these via the Agent tool.
+
+**Model policy is researched, not assumed (mandatory).** Model names change over time. At the start
+of a build (and whenever asked), Drax MUST run a live web search to find the **latest available**
+Opus and Sonnet models, then ask the founder how to allocate them — recommending the executive band
+on the newest Opus at high (or xhigh/max) effort and the IC band on the newest Sonnet at high effort.
+The top tier (e.g. Fable 5, `claude-fable-5`) is offered as an optional maximum-capability choice for
+the executive band. If the founder chooses **guarantee-latest**, Drax always uses the newest models
+and re-checks on later runs. The chosen policy is persisted to `./drax-workspace/.drax/model-policy.json`
+and applied on every Agent dispatch (model per band) and recommended as the session effort level
+(set via `/effort`, `CLAUDE_CODE_EFFORT_LEVEL`, or settings — effort is a session/settings control,
+not a per-subagent parameter). Current reference at this writing (Drax re-verifies live): Opus 4.8
+`claude-opus-4-8`, Sonnet 4.6 `claude-sonnet-4-6`, Fable 5 `claude-fable-5`; effort levels low /
+medium / high / xhigh (settings) and max (session-only), default high.
 
 ## 3. Gates (G0 → G8) and the document chain
 

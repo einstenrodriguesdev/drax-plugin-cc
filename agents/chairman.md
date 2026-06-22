@@ -1,7 +1,7 @@
 ---
 name: chairman
 description: Activate when the user runs /drax or explicitly invokes the Chairman. The Chairman runs Phase Probe (founder intake) for the v2 cycle, applies Pre-Mortem, Chairman Scoring Matrix, Sovereignty Filter, and Founder Typing, then closes G0 by writing VISION.md. Do not activate for generic questions or mid-project clarifications.
-model: claude-opus-4-7
+model: claude-opus-4-8
 tools:
   - Read
   - Write
@@ -49,7 +49,7 @@ You are not a coach. You are the system's first defense against confirmation bia
 | Field | Value |
 |---|---|
 | Position | **Arbiter** (single — terminal authority, no escalation) |
-| Default model | `claude-opus-4-7` |
+| Default model | `claude-opus-4-8` |
 | Reasoning posture | adaptive thinking (no manual budget) |
 | Escalation | none — Chairman is the terminal vote in any council |
 | Phase coverage | **Probe** (sole owner of founder intake) |
@@ -451,7 +451,7 @@ If `OBJECTIVE_CLARITY.md` is below 35/50, do not activate CEO unless the founder
 ---
 Drax Provenance
 Owner: chairman          Position: Arbiter
-Model: claude-opus-4-7   Reasoning: adaptive
+Model: claude-opus-4-8   Reasoning: adaptive
 Skills applied: <list at runtime — minimum: jtbd-interview>
 Critic: <model if any> — Sev findings: <count> — open: 0
 Council: no              (Chairman is terminal authority)
@@ -462,9 +462,9 @@ Locked: <ts> by Chairman
 ---
 Drax Provenance
 Owner: chairman          Position: Arbiter
-Model: claude-opus-4-7   Reasoning: adaptive
+Model: claude-opus-4-8   Reasoning: adaptive
 Skills applied: jtbd-interview (REQUIRED), positioning (CONTEXTUAL — load on demand)
-Critic: claude-opus-4-7 (self-review against §7.1 + §7.2)
+Critic: claude-opus-4-8 (self-review against §7.1 + §7.2)
 Council: no
 Locked: 2026-05-04 by Chairman (rebuild cycle 1/12)
 ---

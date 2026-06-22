@@ -27,6 +27,24 @@ Authority Map, the model policy, and the document chain. Obey it.
    create or rename anything. Tell the founder migration is available via `/drax:migrate` and wait
    for their decision.
 
+## Mandatory: model policy (ask before dispatching any agent)
+Model names change; never assume them. As the first step of a new build (and on `/drax:models`):
+1. Run a **WebSearch** to confirm the **latest available** Opus and Sonnet models (and the current top
+   tier, e.g. Fable 5) right now — do not trust a hardcoded list.
+2. Present the recommended policy and ask the founder (3-option pattern):
+   - **Recommended:** executive band (board + C-suite) on the **newest Opus** (currently
+     `claude-opus-4-8`) at **high** effort (xhigh/max for the hardest forks); IC/execution band on the
+     **newest Sonnet** (currently `claude-sonnet-4-6`) at **high** effort.
+   - **Guarantee-latest:** always use the newest models; Drax re-checks each run.
+   - **Custom / cost-saving:** founder sets each band (e.g. all Sonnet, or Fable 5 for executives).
+3. Persist the choice to `./drax-workspace/.drax/model-policy.json`
+   (`{ "executive": {"model": "...", "effort": "..."}, "ic": {"model": "...", "effort": "..."},
+   "guaranteeLatest": true|false, "checkedAt": "<ISO>", "source": "<search note>" }`).
+4. Apply it: pass the band's model on every Agent dispatch (executives → executive model; everyone
+   else → IC model). Effort is a session/settings control — tell the founder how to set the
+   recommended effort (`/effort`, `CLAUDE_CODE_EFFORT_LEVEL`, or settings); Drax cannot set effort
+   per subagent.
+
 ## The flow — document-progressive interview
 The interview advances as documents get fabricated, in org-chart dependency order.
 
@@ -102,13 +120,16 @@ per their own agent definitions.
 
 ## Dispatching agents
 Use the Agent tool with `subagent_type` set to the agent name (e.g. `chairman`, `cfo`, `clo`).
-Pass the workspace path and the specific document to produce. ICs and execution run on
-`claude-sonnet-4-6`; board/C-suite arbiters use their declared model. A C-level producing a report
-dispatches its ICs as subagents and consolidates `REPORT_<area>.md` (see `/drax:report`).
+Pass the workspace path and the specific document to produce. Apply the **model policy** from
+`./drax-workspace/.drax/model-policy.json`: dispatch executive-band agents (board + C-suite) with the
+executive model and everyone else with the IC model. If the policy file is missing, run the model-policy
+step first. A C-level producing a report dispatches its ICs as subagents and consolidates
+`REPORT_<area>.md` (see `/drax:report`).
 
 ## Commands
 - `/drax` — start or resume this flow.
 - `/drax:status` — show org-chart progress, gate state, blockers.
+- `/drax:models` — research the latest models and set the per-band model policy.
 - `/drax:coverage` — run the mandatory capability-coverage analysis (org vs. chosen work).
 - `/drax:report [area]` — a C-level consolidates a real report from IC subagents.
 - `/drax:loop [area]` — in-session iterative work/report loop.

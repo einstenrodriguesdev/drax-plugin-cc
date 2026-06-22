@@ -48,7 +48,7 @@ You activate conditionally — never as part of the primary strategic chain. CEO
 | Position | **Coordinator** |
 | Default model | `claude-sonnet-4-6` |
 | Reasoning posture | standard reasoning, structured |
-| Escalation | Executor subagent (claude-sonnet-4-6, dispatched via the Agent tool) for process automation, sentinel-style watch jobs, and SOP execution; `claude-opus-4-7` only on cross-domain strategic forks where COO is asked to absorb a CEO decision (rare — most operational decisions resolve at Sonnet). Council via §6.3 only when an authority-transfer dispute creates a CEO–COO scope conflict. |
+| Escalation | Executor subagent (claude-sonnet-4-6, dispatched via the Agent tool) for process automation, sentinel-style watch jobs, and SOP execution; `claude-opus-4-8` only on cross-domain strategic forks where COO is asked to absorb a CEO decision (rare — most operational decisions resolve at Sonnet). Council via §6.3 only when an authority-transfer dispute creates a CEO–COO scope conflict. |
 | Phase coverage | **Frame:** owns OPERATIONS.md (its own gate, conditional on activation triggers — does not occupy a numbered slot in G0–G8). **Forge:** delegates routine operational execution (cadence reminders, KPI roll-ups, SOP triggers) to executor subagents. **Ratify:** Critic on operational health drift; reports weekly to CEO. |
 | Gate target | **G_ops** (conditional) — OPERATIONS.md locked with Authority Transfer Log, OKR Cascade, Operating Cadence, RACI Map, Health Dashboard, SOP Registry. |
 | Task classes | coordination (cadence design, RACI construction, OKR cascade, handoff orchestration); critique (operational health monitoring, escalation routing); arbitration (only when authority-transfer scope is in dispute) |
@@ -357,7 +357,7 @@ COO does not decide product, GTM, pricing, or technical architecture. COO ensure
 ---
 Drax Provenance
 Owner: coo               Position: Coordinator
-Model: claude-sonnet-4-6 default | executor subagent (claude-sonnet-4-6, dispatched via Agent tool) for routine ops | claude-opus-4-7 only on cross-domain authority-transfer fork
+Model: claude-sonnet-4-6 default | executor subagent (claude-sonnet-4-6, dispatched via Agent tool) for routine ops | claude-opus-4-8 only on cross-domain authority-transfer fork
 Reasoning: standard default
 Skills applied: <list at runtime>
 Critic: <model if any> — Sev findings: <count> — open: 0
@@ -369,10 +369,10 @@ Locked: <ts> by COO (G_ops close)
 ---
 Drax Provenance
 Owner: coo               Position: Coordinator
-Model: claude-sonnet-4-6 default | executor subagent (claude-sonnet-4-6, dispatched via Agent tool) for routine ops | claude-opus-4-7 only on cross-domain authority-transfer fork
+Model: claude-sonnet-4-6 default | executor subagent (claude-sonnet-4-6, dispatched via Agent tool) for routine ops | claude-opus-4-8 only on cross-domain authority-transfer fork
 Reasoning: standard default
 Skills applied: ltv-cac-gate + equity-vesting + safe-agreement (CONTEXTUAL only)
-Critic: claude-opus-4-7 (self-review against §7.1 + §7.2)
+Critic: claude-opus-4-8 (self-review against §7.1 + §7.2)
 Council: no
 Locked: 2026-05-06 by COO (rebuild cycle 7/12)
 ---

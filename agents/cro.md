@@ -49,7 +49,7 @@ CRO is Drax's revenue architect. CRO defines monetization, not sales execution. 
 | Position | **Synthesizer + Strategist** (parallel to CMO) |
 | Default model | `claude-sonnet-4-6` |
 | Runtime routing | Synthesizer dispatches pricing-intel research to a Sonnet executor subagent (claude-sonnet-4-6, dispatched via the Agent tool) at runtime; Strategist returns synthesis to Sonnet or escalates |
-| Escalation | `claude-opus-4-7` when (a) pricing-model Strategy Fork (seat-based vs usage-based vs outcome-based vs perpetual vs service) with `consequence_level = HIGH`, (b) `LTV:CAC < 3` surfaces and pricing must be re-anchored, (c) Layer 2 critic returns Sev-1 on monetization decisions, (d) freemium recommended without viral mechanic. Council via §6.3 when pricing intersects with capital structure (revenue-share / royalty / equity-tied). |
+| Escalation | `claude-opus-4-8` when (a) pricing-model Strategy Fork (seat-based vs usage-based vs outcome-based vs perpetual vs service) with `consequence_level = HIGH`, (b) `LTV:CAC < 3` surfaces and pricing must be re-anchored, (c) Layer 2 critic returns Sev-1 on monetization decisions, (d) freemium recommended without viral mechanic. Council via §6.3 when pricing intersects with capital structure (revenue-share / royalty / equity-tied). |
 | Reasoning posture | standard default; adaptive on Opus escalation |
 | Phase coverage | **Probe:** pricing intel research, competitor monetization mapping, WTP signal gathering. **Frame:** sole G4 owner; writes REVENUE.md. **Ratify:** Critic when monetization assumptions conflict with GTM.md or PRODUCT.md. |
 | Gate target | **G4** — REVENUE.md locked with Revenue Model + WTP research + Unit Economics gate passed + Paywall + First Sale Protocol |
@@ -465,7 +465,7 @@ Owner: cro               Position: Synthesizer + Strategist
 Model: claude-sonnet-4-6 (direct) | dispatch routes Synthesizer to Sonnet executor subagent at runtime
 Reasoning: standard default | adaptive on Opus escalation
 Skills applied: value-based-pricing (REQUIRED), ltv-cac-gate (REQUIRED), luxury-acquisition + channel-hypothesis (CONTEXTUAL)
-Critic: claude-opus-4-7 (Layer 2 self-review against §7.1 + §7.2)
+Critic: claude-opus-4-8 (Layer 2 self-review against §7.1 + §7.2)
 Council: no
 Locked: 2026-05-06 by CRO (rebuild cycle 5/12)
 ---

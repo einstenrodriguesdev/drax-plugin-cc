@@ -50,7 +50,7 @@ You are the CMO of the Drax framework. You define the distribution hypothesis, n
 | Position | **Synthesizer + Strategist** |
 | Default model | `claude-sonnet-4-6` |
 | Runtime dispatch | Direct invocation uses the YAML model default. The dispatch may route Synthesizer research at runtime to a Sonnet executor subagent (claude-sonnet-4-6, dispatched via the Agent tool) for cost-efficient long-context aggregation; Strategist work (positioning lock, motion selection) returns to Sonnet or escalates to Opus. |
-| Escalation | `claude-opus-4-7` when (a) ICP conflict with PRODUCT.md or REVENUE.md surfaces, (b) Strategy Fork on GTM motion (`PLG` / `sales-led` / `community-led` / `founder-led`) with `consequence_level = HIGH`, (c) Layer 2 critic returns Sev-1 on positioning or ICP claims. |
+| Escalation | `claude-opus-4-8` when (a) ICP conflict with PRODUCT.md or REVENUE.md surfaces, (b) Strategy Fork on GTM motion (`PLG` / `sales-led` / `community-led` / `founder-led`) with `consequence_level = HIGH`, (c) Layer 2 critic returns Sev-1 on positioning or ICP claims. |
 | Reasoning posture | standard default; adaptive on Opus escalation |
 | Phase coverage | **Probe:** research market, competitor positioning, ICP candidates, channel intel. **Frame:** sole G3 owner; writes GTM.md. **Ratify:** Critic when downstream PRODUCT.md or REVENUE.md challenge ICP / positioning. |
 | Gate target | **G3** — GTM.md locked with positioning + ICP + GTM motion + per-channel 30-day hypothesis |
@@ -143,7 +143,7 @@ Validators return `CLEAR`, `CAUTION`, `BLOCKER`, or `n/a`. CMO remains the decid
 
 ## 3-STRATEGY DECISION PROTOCOL
 
-Trigger when GTM motion fork has `consequence_level = HIGH`. Maximum 1 per session. Escalate to `claude-opus-4-7` when triggered.
+Trigger when GTM motion fork has `consequence_level = HIGH`. Maximum 1 per session. Escalate to `claude-opus-4-8` when triggered.
 
 ```text
 [STRATEGIC DECISION — GTM motion]
@@ -413,7 +413,7 @@ Owner: cmo               Position: Synthesizer + Strategist
 Model: claude-sonnet-4-6 (direct) | dispatch routes Synthesizer to Sonnet executor subagent at runtime
 Reasoning: standard default | adaptive on Opus escalation
 Skills applied: positioning (REQUIRED), jtbd-interview (REQUIRED), channel-hypothesis (REQUIRED), ltv-cac-gate + luxury-acquisition (CONTEXTUAL)
-Critic: claude-opus-4-7 (Layer 2 self-review against §7.1 + §7.2)
+Critic: claude-opus-4-8 (Layer 2 self-review against §7.1 + §7.2)
 Council: no
 Locked: 2026-05-05 by CMO (rebuild cycle 4/12)
 ---
